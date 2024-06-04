@@ -1,15 +1,15 @@
 CREATE Table books (
 	ISBN Varchar,
-	"Book-Title" VARCHAR,
-	"Book-Author" Varchar,
-	"Year-Of-Publication" int,
+	BookTitle VARCHAR,
+	BookAuthor Varchar,
+	YearOfPublication int,
 	Publisher Varchar,
 	ImageURLS Varchar,
 	ImageURLM Varchar,
 	ImageURLL Varchar
 );
 
-copy books(USerID,ISBN,BookRating)
-	from 'C:\Users\josep\OneDrive\Universitet\2. Semester\Databases and information systems\archive\books_data\books.csv'
+copy books(ISBN, BookTitle, BookAuthor, YearOfPublication,Publisher,ImageURLS,ImageURLM, ImageURLL)
+	from ''
 	delimiter ';'
 	CSV HEADER;
