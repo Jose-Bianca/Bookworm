@@ -12,4 +12,5 @@ CREATE Table books (
 copy books(ISBN, BookTitle, BookAuthor, YearOfPublication,Publisher,ImageURLS,ImageURLM, ImageURLL)
 	from ''
 	delimiter ';'
+	escape '\'
 	CSV HEADER;
