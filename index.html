@@ -1,5 +1,5 @@
 {% extends "navbar.html" %} {% block content %}
-<h1>Crypto Punk database!</h1>
+<h1>Bookworm database</h1>
 <div class="querybox">
   <a href="/punk/{{randomNumber}}">
     <input type="submit" id="button" value="Random" />
@@ -105,11 +105,11 @@
         class="image"
       />
       <div class="container">
-        <h4><b>Punk nr. {{content[i][0]}}</b></h4>
-        <p class="card-text">Type: {{content[i][1]}}</p>
-        <p class="card-text">Gender: {{content[i][2]}}</p>
-        <p class="card-text">Skintone: {{content[i][3]}}</p>
-        <p class="card-text">Accesories: {{content[i][4]}}</p>
+        <h4><b>{{content[i][1]}}</b></h4>
+        <p class="card-text">Title: {{content[i][1]}}</p>
+        <p class="card-text">Author: {{content[i][2]}}</p>
+        <p class="card-text">Publisher: {{content[i][3]}}</p>
+        <p class="card-text">Published: {{content[i][4]}}</p>
       </div>
     </div>
   </a>
