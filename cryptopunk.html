@@ -1,0 +1,26 @@
+{% extends "navbar.html" %} {% block content %}
+<h1> {{content[1]}}</h1>
+<div class="imgdiv">
+  <img src="/static/images/{{content[0]}}.png" alt="Avatar" class="imagebig" />
+</div>
+<div class="tablecontainer">
+  <div class="tableitem">
+    <h4>{{content[1]}}</h4>
+    <p class="card-text">Title: {{content[1]}}</p>
+    <p class="card-text">Author: {{content[2]}}</p>
+    <p class="card-text">Publisher: {{content[3]}}</p>
+    <p class="card-text">Published: {{content[4]}}</p>
+  </div>
+  <div class="tableitem">
+    <h4>Current Rating</h4>
+    <h2>{{price}}</h2>
+  </div>
+  <div class="tableitem">
+    <form action="" method="post" class="queryform2">
+      <div class="querybox">
+        <input type="submit" id="buttonAdd" value="Add favourite" />
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock content %}
