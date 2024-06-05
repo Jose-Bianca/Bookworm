@@ -1,0 +1,29 @@
+{% extends "navbar.html" %} {% block content %}
+<h1>
+  Welcome back {{username}}!
+</h1>
+<h3>
+  Favourite books: 
+</h3>
+
+<div class="cards">
+  {%for i in range(length)%}
+  <a href="/punk/{{content[i][0]}}">
+    <div class="card">
+      <img
+        src="/static/images/{{content[i][0]}}.png"
+        alt="Avatar"
+        class="image"
+      />
+      <div class="container">
+        <h4><b>{{content[i][1]}}</b></h4>
+        <p class="card-text">Title: {{content[i][1]}}</p>
+        <p class="card-text">Author: {{content[i][2]}}</p>
+        <p class="card-text">Publisher: {{content[i][3]}}</p>
+        <p class="card-text">Published: {{content[i][4]}}</p>
+      </div>
+    </div>
+  </a>
+  {%endfor%}
+</div>
+{% endblock content %}
