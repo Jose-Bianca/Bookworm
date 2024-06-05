@@ -1,0 +1,38 @@
+{% extends "navbar.html" %} {% block content %}
+<h1>Crypto Punk database!</h1>
+<div class="querybox">
+  <a href="/punk/{{randomNumber}}">
+  </a>
+</div>
+<form action="" method="post" class="queryform">
+  <div class="querybox">
+  <input maxlength=4 type="number" id="form" name="punkid" placeholder="title,author,isbn" \ />
+  <input type="submit" name="punkid" id="button" value="Go"/>
+    
+
+
+    <input type="submit" id="button" value="Search" />
+  </div>
+</form>
+<div class="cards">
+  {%for i in range(0,length)%}
+  <a href="/punk/{{content[i][0]}}">
+    <div class="card">
+      <img
+        src="/static/images/{{content[i][0]}}.png"
+        alt="Avatar"
+        class="image"
+      />
+      <div class="container">
+        <h4><b>Punk nr. {{content[i][0]}}</b></h4>
+        <p class="card-text">Type: {{content[i][1]}}</p>
+        <p class="card-text">Gender: {{content[i][2]}}</p>
+        <p class="card-text">Skintone: {{content[i][3]}}</p>
+        <p class="card-text">Accesories: {{content[i][4]}}</p>
+      </div>
+    </div>
+  </a>
+  {%endfor%}
+</div>
+
+{% endblock content %}
