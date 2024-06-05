@@ -1,0 +1,238 @@
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  padding-top: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+.radio input {
+  position: absolute;
+  cursor: pointer;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ede2c8; /*color of box for login*/
+  border: 4px solid #805630; /*headline color*/
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(191, 158, 118); /*headline textcolor */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  color: #CF7C14; /*unsure*/
+}
+
+body {
+  background:linear-gradient(to left top, #e3e1fb, #ecd2b4) fixed; /*bagground*/
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: 'Bookman old style', sans-serif;
+}
+label {
+  font-size: 18px;
+  color: #d47b14; /*male,femal ect*/
+}
+#form {
+  width: 400px;
+  font-family: 'Bookman old style', sans-serif;
+  padding: 10px; /*size of box around */
+  font-size: 25px; /*size of title,autor...*/
+  outline:none;
+  background: linear-gradient(to left top, #CF7C14, #d7d4ff) fixed; /*indside punk id box and acc*/
+  border: 4px solid #805630; /*outline for box*/
+  color: rgba(207,124,20,0.8);
+  margin: 5px;
+  transition: all 0.5s;
+}
+#formNumber {
+width: 100px;
+  font-family: 'Bookman old style', sans-serif;
+  padding: 10px;
+  font-size: 25px;
+  outline:none;
+  background: linear-gradient(to left top, #CF7C14, #d7d4ff) fixed; /**/
+  border: 4px solid #CF7C14;
+  color: rgba(207,124,20,0.8);
+  margin: 5px;
+  transition: all 0.5s;
+}
+
+#form:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: 4px solid #fcec0c;
+}
+#form:focus {
+  border: 4px solid #fcec0c;
+}
+
+#button {
+  width: 125px;
+  font-family: 'Bookman old style', sans-serif;
+  padding: 11px;
+  font-size: 20px;
+  font-weight:bold;
+  margin: 5px;
+  outline:none;
+  background: linear-gradient(to left top, #CF7C14, #d7d4ff) fixed;
+  border: 4px solid #805630;/*color of surround strip of search*/
+  color: rgba(207,124,20,0.8);
+}
+#buttonAdd {
+  width: 250px;
+  height: 125px;
+  font-family: 'Bookman old style', sans-serif;
+  padding: 11px;
+  font-size: 30px;/*size of "add fav"*/
+  font-weight:bold;
+  margin: 5px;
+  outline:none;
+  background: linear-gradient(to left top, #ede2c8, #d7d4ff) fixed;
+  border: 6px solid #eeddb6; /*color of stripe around "add fav"  box*/
+  color: rgba(128,86,48,0.8); /*color text inside punk profile "add favorite"*/
+}
+#buttonAdd:hover {
+  border: 4px solid #fcec0c;
+}
+
+#buttonAdd:focus {
+  border: 4px solid #fcec0c;
+}
+
+#button:hover {
+  border: 4px solid #fcec0c;
+}
+
+#button:focus {
+  border: 4px solid #fcec0c; /*when letting mouse over search box*/
+}
+p {
+  font-size: 1.2em;
+  color: rgb(191, 158, 118); /*unsure*/
+}
+
+h1 {
+  font-size: 4em;/*size of heading/title*/
+  color: rgb(191, 158, 118); /*color of text"bookworm"*/
+  text-align: center;
+}
+h2 {
+  font-size: 2em; /*size of price text*/
+  color: rgb(191, 158, 118); /*color of price*/
+  text-align: center;
+}
+h3 {
+  font-size: 2em; /*size of text "favorite punk"*/
+  color: #805630;/*color of Favorite title as well as*/
+}
+h4 {
+    text-align: center;
+    color: rgb(191, 158, 118); /*color of punk nr 6881 aka title of each book*/
+}
+p.card-text {
+    font-size: 0.6em; /*size of small writing in box*/
+    color: rgb(191, 158, 118); /*color of small writing in box*/
+}
+
+.contact {
+  padding-left: 25rem;
+  padding-top: 15rem;
+}
+.contactUser {
+  padding-bottom: 10px;
+  height: 100px;
+}
+.contactText {
+  vertical-align: middle;
+  line-height: 100px; 
+}
+.image2 {
+  float: left;
+  height: 100px;
+  width: 100px;  
+  image-rendering: pixelated;
+}
+
+.queryform {
+  background-color: #dea97b; /*color of middlebox #1*/
+}
+.querybox{
+  margin: auto auto;
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dea97b;/*color of middle bos #2*/
+}
+
+.tablecontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 4rem;
+  padding-top: 1rem;
+}
+.tableitem {
+  border: 4px solid #fcec0c;
+  padding: 1rem;
+}
+.image {
+  height: 300px;
+  width: 300px;  
+  image-rendering: pixelated;
+}
+.imagebig {
+  height: 400px;
+  width: 400px;  
+  image-rendering: pixelated;
+}
+.imgdiv {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  border: 4px solid #805630; /*color of box surround book*/
+  box-shadow: 0 4px 8px 0 rgb(207, 124, 20); /*gradient light for color surr book*/
+  transition: 0.3s; 
+  width: 300px;
+  height: 450px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: 4px solid #fcec0c;
+}
+
+/* Add some padding inside the card container */
+.container {
+  background-color: #ede2c8; /*color of description box*/
+  padding: 2px 16px;
+  height: 146px;
+}
