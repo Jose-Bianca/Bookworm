@@ -12,7 +12,7 @@ import random
 app = Flask(__name__ , static_url_path='/static')
 
 # set your own database name, username and password
-db = "dbname='crypto' user='postgres' host='localhost' password='postgres'" #potentially wrong password
+db = "dbname='XXXX' user='postgres' host='localhost' password='XXXXX'" #potentially wrong password
 conn = psycopg2.connect(db)
 cursor = conn.cursor()
 
@@ -46,14 +46,14 @@ def createaccount():
 @app.route("/", methods=["POST", "GET"])
 def home():
     cur = conn.cursor()
-    #Getting 10 random rows from Attributes
-    tenrand = '''select * from Attributes order by random() limit 10;'''
+    #Getting 10 random rows from Books
+    tenrand = '''select * from Books order by random() limit 10;'''
     cur.execute(tenrand)
     punks = list(cur.fetchall())
     length = len(punks)
 
-    #Getting random id from table Attributes
-    randint = '''select id from Attributes order by random() limit 1;'''
+    #Getting random id from table Books
+    randint = '''select id from Books order by random() limit 1;'''
     cur.execute(randint)
     randomNumber = cur.fetchone()[0]
     if not session.get('logged_in'):
@@ -82,7 +82,7 @@ def querypage(gender, types, skin, count, access):
     cur = conn.cursor()
     rest = 0
 
-    sqlcode = f'''select * from Attributes where '''
+    sqlcode = f'''select * from Books where '''
     if gender != "both":
         sqlcode += f''' gender = '{gender}' and'''
         rest += 1
@@ -104,7 +104,7 @@ def querypage(gender, types, skin, count, access):
         sqlcode += f''' count = '{count}' and'''
 
     if rest == 0: 
-        sqlcode = f''' select * from Attributes'''
+        sqlcode = f''' select * from Books'''
 
     else: 
         sqlcode  = sqlcode[:-3]
@@ -155,7 +155,7 @@ def profile():
     
     username = session['username']
 
-    sql1 = f'''select id, type, gender, skin_tone, count, accessories from favorites natural join attributes where username = '{username}' '''
+    sql1 = f'''select id, type, gender, skin_tone, count, accessories from favorites natural join books where username = '{username}' '''
     cur.execute(sql1)
     favs = cur.fetchall()
     length = len(favs)
@@ -194,7 +194,7 @@ def punkpage(punkid):
     else:
         price =pricelist[4].replace('</td>', '').replace('<td>','')
 
-    sql1 = f''' select * from attributes where id = '{punkid}' '''
+    sql1 = f''' select * from books where id = '{punkid}' '''
 
     cur.execute(sql1)
 
