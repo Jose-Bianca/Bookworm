@@ -10,9 +10,10 @@ import pandas as pd
 import random
 
 app = Flask(__name__ , static_url_path='/static')
+app.secret_key = 'meatball'
 
 # set your own database name, username and password
-db = "dbname='XXXX' user='postgres' host='localhost' password='XXXXX'" #potentially wrong password
+db = "dbname='Bookworm' user='postgres' host='localhost' password='Bianca-2904'" #potentially wrong password
 conn = psycopg2.connect(db)
 cursor = conn.cursor()
 
@@ -203,5 +204,4 @@ def punkpage(punkid):
     return render_template("cryptopunk.html", content=ct, price=price)
 
 if __name__ == "__main__":
-    app.secret_key = os.urandom(12)
     app.run(debug=True)
