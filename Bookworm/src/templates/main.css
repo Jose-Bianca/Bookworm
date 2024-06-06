@@ -196,12 +196,12 @@ p.card-text {
 }
 .image {
   height: 300px;
-  width: 300px;  
+  width: 200px;  
   image-rendering: pixelated;
 }
 .imagebig {
-  height: 400px;
-  width: 400px;  
+  height: 450px;
+  width: 300px;  
   image-rendering: pixelated;
 }
 .imgdiv {
