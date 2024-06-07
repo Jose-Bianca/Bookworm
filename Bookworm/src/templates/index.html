@@ -1,100 +1,15 @@
 {% extends "navbar.html" %} {% block content %}
-<h1>Bookworm database</h1>
+<h1>Bookworms database</h1>
 <div class="querybox">
-  <a href="/punk/{{randomNumber}}">
-    <input type="submit" id="button" value="Random" />
-  </a>
 </div>
-<form action="" method="post" class="queryform">
+<form action="/search" method="post" class="queryform">
   <div class="querybox">
-  <input maxlength=4 type="number" id="form" name="punkid" placeholder="Punk ID" \ />
+  <input maxlength=50 type="text" id="form" name="search_text" placeholder="Search for title or author..."  />
   <input type="submit" name="punkid" id="button" value="Go"/>
-    
-  </div>
-  <div class="querybox">
-    <label class="radio"
-      >Male
-      <input
-        type="radio"
-        checked="checked"
-        name="radio"
-        id="Male"
-        value="Male"
-      />
-    </label>
-    <label class="radio"
-      >Female
-      <input type="radio" name="radio" id="Female" value="Female" />
-    </label>
-    <label class="radio"
-      >Both
-      <input type="radio" name="radio" id="Both" value="Both" />
-    </label>
-  </div>
-  <div class="querybox">
-    <label class="radio"
-      >Human
-      <input
-        type="radio"
-        checked="checked"
-        name="radiotype"
-        id="Human"
-        value="Human"
-      />
-    </label>
-    <label class="radio"
-      >Ape
-      <input type="radio" name="radiotype" id="Ape" value="Ape" />
-    </label>
-    <label class="radio"
-      >Alien
-      <input type="radio" name="radiotype" id="Alien" value="Alien" />
-    </label>
-    <label class="radio"
-      >All
-      <input type="radio" name="radiotype" id="All" value="All" />
-    </label>
-  </div>
-  <div class="querybox">
-    <label class="radio"
-      >Dark
-      <input
-        type="radio"
-        checked="checked"
-        name="radioskin"
-        id="Dark"
-        value="Dark"
-      />
-    </label>
-    <label class="radio"
-      >Medium
-      <input type="radio" name="radioskin" id="Medium" value="Medium" />
-    </label>
-    <label class="radio"
-      >Light
-      <input type="radio" name="radioskin" id="Light" value="Light" />
-    </label>
-    <label class="radio"
-      >Albino
-      <input type="radio" name="radioskin" id="Albino" value="Albino" />
-    </label>
-    <label class="radio"
-      >All
-      <input type="radio" name="radioskin" id="All" value="All" />
-    </label>
-  </div>
-  <div class="querybox">
-    <input type="text" id="form" name="access" placeholder="Accessories" \ />
-    <input
-      type="number"
-      id="formNumber"
-      name="accessCount"
-      placeholder="Count"
-      \
-    />
-    <input type="submit" id="button" value="Search" />
   </div>
 </form>
+
+
 <div class="cards">
   {%for i in range(0,length)%}
   <a href="/punk/{{content[i][0]}}">
