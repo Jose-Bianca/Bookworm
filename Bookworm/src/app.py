@@ -14,7 +14,7 @@ app = Flask(__name__ , static_url_path='/static')
 app.secret_key = 'meatball'
 
 # set your own database name, username and password
-db = "dbname='bookworms' user='postgres' host='localhost' password='postgres'" #potentially wrong password
+db = "dbname='Bookworm' user='postgres' host='localhost' password='Bianca-2904'" #potentially wrong password
 conn = psycopg2.connect(db)
 cursor = conn.cursor()
 
@@ -58,6 +58,11 @@ def home():
 
 
 #The search function
+import re
+from psycopg2.extensions import AsIs
+
+import re
+
 @app.route('/search', methods=['POST'])
 def search():
     search_text = request.form['search_text']  # Get the search query from the form
@@ -65,10 +70,10 @@ def search():
 
     # Use the search query to find match in the database, we need a regex for this
 
-    sqlcode = '''SELECT * FROM Books WHERE type LIKE %s OR gender LIKE %s'''
-    like_pattern = "%" + search_text + "%"
+    sqlcode = '''SELECT * FROM Books WHERE type ~* %s OR gender ~* %s'''
+    regex_pattern = ".*" + re.escape(search_text) + ".*"
 
-    cur.execute(sqlcode, (like_pattern, like_pattern))
+    cur.execute(sqlcode, (regex_pattern, regex_pattern))
     content = list(cur.fetchall())
 
     length = len(content)
