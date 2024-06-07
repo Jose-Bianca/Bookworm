@@ -1,4 +1,4 @@
-# Bookworms database - find your favourite books rating!
+# Bookworms database - find your favourite books!
 
 # running dis-Website-project:
 
