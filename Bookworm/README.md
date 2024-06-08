@@ -3,7 +3,7 @@ DIS KU 2024
 Group 11
 (Note. We have build our project on the NFT-crypto-punk example provided in the course)
 
-# running dis-Website-project:
+# running Bookworm-project:
 
 Assumes a working Python 3 installation (with python=python3 and pip=pip3).
 
