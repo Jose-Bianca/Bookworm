@@ -68,7 +68,7 @@ def search():
     search_text = request.form['search_text']  # Get the search query from the form
     cur = conn.cursor()
 
-    # Use the search query to find match in the database, we need a regex for this
+    # Use the search query to find all matches in the database,using Regex
 
     sqlcode = '''SELECT * FROM Books WHERE type ~* %s OR gender ~* %s'''
     regex_pattern = ".*" + re.escape(search_text) + ".*"
