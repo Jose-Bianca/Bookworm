@@ -70,7 +70,7 @@ def search():
 
     # Use the search query to find match in the database, we need a regex for this
 
-    sqlcode = '''SELECT * FROM Books WHERE type ~* %s OR gender ~* %s'''
+    sqlcode = '''SELECT * FROM Books WHERE BookTitle ~* %s OR BookAuthor ~* %s'''
     regex_pattern = ".*" + re.escape(search_text) + ".*"
 
     cur.execute(sqlcode, (regex_pattern, regex_pattern))
@@ -118,7 +118,7 @@ def profile():
     
     username = session['username']
 
-    sql1 = f'''select id, type, gender, skin_tone, count, accessories from favorites natural join books where username = '{username}' '''
+    sql1 = f'''select id, BookTitle, BookAuthor, YearOfPublication, Publisher, Rating from favorites natural join books where username = '{username}' '''
     cur.execute(sql1)
     favs = cur.fetchall()
     length = len(favs)
@@ -128,10 +128,7 @@ def profile():
 @app.route("/punk/<punkid>", methods=["POST", "GET"])
 def punkpage(punkid):
     cur = conn.cursor()
-    """
-    Instead of PunkID we would have our database content
-    for 1 cryptopunk instead.
-    """
+
     if not session.get('logged_in'):
         return render_template('login.html')
 
@@ -146,7 +143,7 @@ def punkpage(punkid):
             conn.rollback()
 
     # Query to find the rating of the book
-    sql1 = f''' select accessories from books where id = '{punkid}' '''
+    sql1 = f''' select Rating from books where id = '{punkid}' '''
 
     cur.execute(sql1)
     price = cur.fetchone()[0]

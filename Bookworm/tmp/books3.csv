@@ -1,4 +1,4 @@
-id;type;gender;skin_tone;count;accessories
+id;BookTitle;BookAuthor;YearOfPublication;Publisher;Rating
 1;Classical Mythology;Mark P. O. Morford;2002;Oxford University Press;4.08
 2;Clara Callan;Richard Bruce Wright;2001;HarperFlamingo Canada;3.87
 3;Decision in Normandy;Carlo D'Este;1991;HarperPerennial;4.05

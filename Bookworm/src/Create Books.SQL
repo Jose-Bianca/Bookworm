@@ -1,12 +1,12 @@
-CREATE TABLE IF NOT EXISTS Attributes(id char(4),
-type varchar,
-gender varchar,
-skin_tone int,
-count varchar,
-accessories varchar,
+CREATE TABLE IF NOT EXISTS books(id char(4),
+BookTitle varchar,
+BookAuthor varchar,
+YearOfPublication int,
+Publisher varchar,
+Rating varchar,
 CONSTRAINT nft_pk PRIMARY KEY (id));
 
-copy  Attributes(id,type,gender, skin_tone, count, accessories)
+copy  books(id,BookTitle,BookAuthor,YearOfPublication , Publisher, Rating)
             from 'C:\PATH\TO\PROJECT\dis-nft-project\tmp\attributes.csv'
             delimiter ';'
             escape '\'
