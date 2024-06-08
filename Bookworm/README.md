@@ -1,4 +1,6 @@
 # Bookworms database - find your favourite books!
+DIS KU 2024
+Group 11
 (Note. We have build our project on the NFT-crypto-punk example provided in the course)
 
 # running dis-Website-project:
