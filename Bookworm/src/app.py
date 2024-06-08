@@ -14,7 +14,7 @@ app = Flask(__name__ , static_url_path='/static')
 app.secret_key = 'meatball'
 
 # set your own database name, username and password
-db = "dbname='Bookworm' user='postgres' host='localhost' password='Bianca-2904'" #potentially wrong password
+db = "dbname='xxxx' user='postgres' host='localhost' password='xxxx'" #potentially wrong password
 conn = psycopg2.connect(db)
 cursor = conn.cursor()
 
@@ -68,7 +68,7 @@ def search():
     search_text = request.form['search_text']  # Get the search query from the form
     cur = conn.cursor()
 
-    # Use the search query to find match in the database, we need a regex for this
+    # Use the search query to find all matches in the database,using Regex
 
     sqlcode = '''SELECT * FROM Books WHERE BookTitle ~* %s OR BookAuthor ~* %s'''
     regex_pattern = ".*" + re.escape(search_text) + ".*"

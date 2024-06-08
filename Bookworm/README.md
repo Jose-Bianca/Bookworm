@@ -1,4 +1,5 @@
 # Bookworms database - find your favourite books!
+(Note. We have build our project on the NFT-crypto-punk example provided in the course)
 
 # running dis-Website-project:
 
@@ -8,7 +9,7 @@ Assumes a working Python 3 installation (with python=python3 and pip=pip3).
 >$ pip install -r requirements.txt
 
 (2) Initialize the database, by running the SQL files (Creating the necessary tables) 
-IMPORTANT: In the 'Create Book.SQL' change the directory to the full path of the 'books3.csv' file. 
+IMPORTANT: In the 'Create Book.SQL' change the directory to the full path of the 'books3.csv' file, in the tmp file. 
 
 (3) In the app.py-file, set your own database username and password
 
@@ -32,5 +33,5 @@ IMPORTANT: In the 'Create Book.SQL' change the directory to the full path of the
 		
 (6) Profile page / Each user have their own individual page where they can see their favourite books.
 
-(8) Contact / At last we have a 'contact' page.
+(8) Contact / At last we have a 'contact' page with group members KU id.
 
