@@ -14,7 +14,7 @@ app = Flask(__name__ , static_url_path='/static')
 app.secret_key = 'meatball'
 
 # set your own database name, username and password
-db = "dbname='Bookworm' user='postgres' host='localhost' password='Bianca-2904'" #potentially wrong password
+db = "dbname='xxxx' user='postgres' host='localhost' password='xxxx'" #potentially wrong password
 conn = psycopg2.connect(db)
 cursor = conn.cursor()
 
