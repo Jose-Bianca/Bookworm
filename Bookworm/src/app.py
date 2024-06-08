@@ -14,7 +14,7 @@ app = Flask(__name__ , static_url_path='/static')
 app.secret_key = 'meatball'
 
 # set your own database name, username and password
-db = "dbname='xxxx' user='postgres' host='localhost' password='xxxx'" #potentially wrong password
+db = "dbname='Bookworm' user='postgres' host='localhost' password='Bianca-2904'" #potentially wrong password
 conn = psycopg2.connect(db)
 cursor = conn.cursor()
 
@@ -78,7 +78,7 @@ def search():
 
     length = len(content)
 
-    return render_template("cryptoquery.html", content=content, length=length)
+    return render_template("bookquery.html", content=content, length=length)
 
 
 @app.route('/login', methods=['POST'])
@@ -125,8 +125,8 @@ def profile():
     return render_template("profile.html", content=favs, length=length, username = username)
 
 
-@app.route("/punk/<punkid>", methods=["POST", "GET"])
-def punkpage(punkid):
+@app.route("/books/<bookid>", methods=["POST", "GET"])
+def bookpage(bookid):
     cur = conn.cursor()
 
     if not session.get('logged_in'):
@@ -136,24 +136,24 @@ def punkpage(punkid):
         # Add til favourite
         username = session['username']
         try: 
-            sql1 = f'''insert into favorites(id, username) values ('{punkid}', '{username}') '''
+            sql1 = f'''insert into favorites(id, username) values ('{bookid}', '{username}') '''
             cur.execute(sql1)
             conn.commit()
         except:
             conn.rollback()
 
     # Query to find the rating of the book
-    sql1 = f''' select Rating from books where id = '{punkid}' '''
+    sql1 = f''' select Rating from books where id = '{bookid}' '''
 
     cur.execute(sql1)
     price = cur.fetchone()[0]
     # Query to find the book details
-    sql2 = f''' select * from books where id = '{punkid}' '''
+    sql2 = f''' select * from books where id = '{bookid}' '''
 
     cur.execute(sql2)
     ct = cur.fetchone()
 
-    return render_template("cryptopunk.html", content=ct, price=price)
+    return render_template("book.html", content=ct, price=price)
 
 if __name__ == "__main__":
     app.run(debug=True)

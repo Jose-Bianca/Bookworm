@@ -56,7 +56,7 @@ label {
   padding: 10px; /*size of box around */
   font-size: 25px; /*size of title,autor...*/
   outline:none;
-  background: linear-gradient(to left top, #CF7C14, #d7d4ff) fixed; /*indside punk id box and acc*/
+  background: linear-gradient(to left top, #CF7C14, #d7d4ff) fixed; /*indside book id box and acc*/
   border: 4px solid #805630; /*outline for box*/
   color: rgba(207,124,20,0.8);
   margin: 5px;
@@ -106,7 +106,7 @@ width: 100px;
   outline:none;
   background: linear-gradient(to left top, #ede2c8, #d7d4ff) fixed;
   border: 6px solid #eeddb6; /*color of stripe around "add fav"  box*/
-  color: rgba(128,86,48,0.8); /*color text inside punk profile "add favorite"*/
+  color: rgba(128,86,48,0.8); /*color text inside book profile "add favorite"*/
 }
 #buttonAdd:hover {
   border: 4px solid #fcec0c;
@@ -139,12 +139,12 @@ h2 {
   text-align: center;
 }
 h3 {
-  font-size: 2em; /*size of text "favorite punk"*/
+  font-size: 2em; /*size of text "favorite book"*/
   color: #805630;/*color of Favorite title as well as*/
 }
 h4 {
     text-align: center;
-    color: rgb(191, 158, 118); /*color of punk nr 6881 aka title of each book*/
+    color: rgb(191, 158, 118); /*color of book nr 6881 aka title of each book*/
 }
 p.card-text {
     font-size: 0.6em; /*size of small writing in box*/

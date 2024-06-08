@@ -5,14 +5,14 @@
 <form action="/search" method="post" class="queryform">
   <div class="querybox">
   <input maxlength=50 type="text" id="form" name="search_text" placeholder="Search for title or author..."  />
-  <input type="submit" name="punkid" id="button" value="Go"/>
+  <input type="submit" name="bookid" id="button" value="Go"/>
   </div>
 </form>
 
 
 <div class="cards">
   {%for i in range(0,length)%}
-  <a href="/punk/{{content[i][0]}}">
+  <a href="/books/{{content[i][0]}}">
     <div class="card">
       <img
         src="/static/images/{{content[i][0]}}.png"
