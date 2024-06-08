@@ -1,4 +1,5 @@
 # Bookworms database - find your favourite books!
+(Note. We have build our project on the NFT-crypto-punk example provided in the course)
 
 # running dis-Website-project:
 
@@ -32,5 +33,5 @@ IMPORTANT: In the 'Create Book.SQL' change the directory to the full path of the
 		
 (6) Profile page / Each user have their own individual page where they can see their favourite books.
 
-(8) Contact / At last we have a 'contact' page.
+(8) Contact / At last we have a 'contact' page with group members KU id.
 
