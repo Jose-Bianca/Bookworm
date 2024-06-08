@@ -195,7 +195,7 @@ p.card-text {
   padding: 1rem;
 }
 .image {
-  height: 300px;
+  height: 250px;
   width: 200px;  
   image-rendering: pixelated;
 }
