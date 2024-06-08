@@ -4,10 +4,10 @@ BookAuthor varchar,
 YearOfPublication int,
 Publisher varchar,
 Rating varchar,
-CONSTRAINT nft_pk PRIMARY KEY (id));
+CONSTRAINT books_pk PRIMARY KEY (id));
 
 copy  books(id,BookTitle,BookAuthor,YearOfPublication , Publisher, Rating)
-            from 'C:\PATH\TO\PROJECT\dis-nft-project\tmp\attributes.csv'
+            from 'C:\Users\josep\OneDrive\Dokumenter\GitHub\Website-project\Bookworm\tmp\books3.csv'
             delimiter ';'
             escape '\'
             CSV HEADER;
