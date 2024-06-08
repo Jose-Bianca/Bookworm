@@ -165,8 +165,8 @@ p.card-text {
 }
 .image2 {
   float: left;
-  height: 100px;
-  width: 100px;  
+  height: 120px;
+  width: 120px;  
   image-rendering: pixelated;
 }
 
