@@ -6,7 +6,7 @@ Publisher varchar,
 Rating varchar,
 CONSTRAINT books_pk PRIMARY KEY (id));
 
-copy  books(id,BookTitle,BookAuthor,YearOfPublication , Publisher, Rating)
+copy  books(id,BookTitle,BookAuthor,YearOfPublication ,Publisher, Rating)
             from 'C:\Users\josep\OneDrive\Dokumenter\GitHub\Website-project\Bookworm\tmp\books3.csv'
             delimiter ';'
             escape '\'
