@@ -47,6 +47,8 @@ def createaccount():
 @app.route("/", methods=["POST", "GET"])
 def home():
     cur = conn.cursor()
+    if not session.get('logged_in'):
+        return render_template('login.html')
     #Getting 10 random rows from Attributes
     tenrand = '''select * from Books order by random() limit 10;'''
     cur.execute(tenrand)
