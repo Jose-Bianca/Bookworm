@@ -31,7 +31,8 @@ IMPORTANT: In the 'Create Book.SQL' change the directory to the full path of the
 
 (4) Books / Each book have their own page where you can see information, rating and you have the option to add the book to your favourites.
 
-(5) Searching / You can search for books by typing in title or the author.
+(5) Searching / You can search for books by typing in title or the author. You can search by part of the title/author as well
+(e.g. find books by all authors named Michael). Note. The database contains only 100 books.
 		
 (6) Profile page / Each user have their own individual page where they can see their favourite books.
 
